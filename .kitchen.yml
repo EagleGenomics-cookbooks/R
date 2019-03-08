@@ -21,3 +21,8 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes:
+      # Test list of R packages
+      R:
+        packages:
+          - ape
+          - optparse
