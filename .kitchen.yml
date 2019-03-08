@@ -1,0 +1,23 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: chef_zero
+  product_version: 14.10
+  
+verifier:
+  name: inspec
+  sudo_command: . /etc/profile;
+
+platforms:
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[R::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
