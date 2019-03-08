@@ -1,0 +1,1 @@
+default['R']['packages'] = %w()
