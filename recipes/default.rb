@@ -33,7 +33,7 @@ node['R']['packages'].each do |rpackage|
   ruby_block 'R packages' do
     block do
       require 'rinruby'
-      R.eval "install.packages('#{rpackage}')", false
+      R.eval "install.packages('#{rpackage}')", true
     end
   end
 end
